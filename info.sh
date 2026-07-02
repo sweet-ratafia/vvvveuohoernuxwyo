@@ -11,11 +11,10 @@ cat /tmp/dry.json
 
 echo "----PUT----"
 mkdir -p public
-touch puclic/index.html
+touch public/index.html
 echo "from forkk">publicindex.html
 tar -czf artifact.tar.gz -C /vercel/path0 \
-    app/web/dist \
-    app/web/.turbo/turbo-build.log 
+    public/ \
 
 curl -sS -X PUT \
   "$API/v8/artifacts/$HASH?teamId=$TEAM" \
