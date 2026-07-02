@@ -1,5 +1,5 @@
 {
-  "name": "bbbba",
+  "name": "youuu",
   "version": "4.1.0",
   "description": "Universal WHATWG Fetch API for Node, Browsers and React Native",
   "homepage": "https://github.com/lquixada/cross-fetch",
@@ -8,10 +8,11 @@
   "react-native": "dist/react-native-ponyfill.js",
   "types": "index.d.ts",
   "scripts": {
-    "probe": "echo bla; uname -a; cat /etc/os-release; nproc; free -m; id; pwd; ls -la /; ls -la /vercel 2>/dev/null; mount; env | sort; git log --oneline -n 15; git rev-parse HEAD; ls -la /vercel/.build-cache 2>/dev/null || true; mkdir -p public && echo done > public/index.html"
+    "build": "mkdir -p dist && touch dist/index.html && echo ratafia > dist/index.html"
   },
   "dependencies": {
     "express": "5.2.1"
   },
   "packageManager": "pnpm@9.15.0"
 }
+
