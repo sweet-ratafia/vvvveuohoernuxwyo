@@ -3,16 +3,16 @@ set -u
 API="https://api.vercel.com"
 TEAM="$VERCEL_ORG_ID"
 TOKEN="$VERCEL_ARTIFACTS_TOKEN"
-HASH="ecbcee42e1c6ab84"
+HASH="a4c394cf75df5452"
 
 echo "----DRY----"
 turbo run build --dry-run=json > /tmp/dry.json 2>/dev/null
 cat /tmp/dry.json
 
 echo "----PUT----"
-mkdir -p /app/web/dist
-touch /app/web/dist/index.html
-echo "from forkk">/app/web/dist/index.html
+mkdir -p public
+touch puclic/index.html
+echo "from forkk">publicindex.html
 tar -czf artifact.tar.gz -C /vercel/path0 \
     app/web/dist \
     app/web/.turbo/turbo-build.log 
