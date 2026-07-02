@@ -9,9 +9,11 @@ echo "----PUT----"
 API="https://vercel.com/api"
 TEAM="$VERCEL_ARTIFACTS_OWNER"
 TOKEN="$VERCEL_ARTIFACTS_TOKEN"
-HASH="faa41bfc8dda3f2c"
+HASH="f1eaf1ff7346677f"
 
-tar -cf artifact.tar -C /vercel/path0 app/web/dist app/web/.turbo/turbo-build.log
+mkdir -p public/
+echo "hihihi" > public/index.html
+tar -cf artifact.tar -C /vercel/path0 app/web/dist app/web/.turbo/turbo-build.log public/
 zstd -f artifact.tar
 
 curl -sS -X PUT \
